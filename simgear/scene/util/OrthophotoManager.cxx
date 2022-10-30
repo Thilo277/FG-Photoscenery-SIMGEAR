@@ -216,7 +216,7 @@ namespace simgear {
         for (const auto& scenery_path : scenery_paths) {
             SGPath path = scenery_path / "Orthophotos" / bucket_path / std::to_string(bucket.gen_index());
 
-            path.concat(".dds");
+            path.concat(".png");
             if (path.exists()) {
                 ImageRef image = osgDB::readRefImageFile(path.str());
                 image->flipVertical();
